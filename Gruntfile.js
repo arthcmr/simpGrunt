@@ -5,8 +5,11 @@
 
 module.exports = function(grunt) {
 
-	//variables
-	var SRC = (grunt.option('src') || 'src/'),
+	//options
+	var src_folder_name = grunt.option('src') || 'src';
+
+	//definitions
+	var SRC = src_folder_name +'/',
 		SRC_LAYOUTS = SRC + 'layouts/',
 		SRC_PAGES = SRC + 'pages/',
 		SRC_PARTIALS = SRC + 'partials/',

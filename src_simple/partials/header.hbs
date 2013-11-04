@@ -1,0 +1,26 @@
+{{! The data is coming from src/data/site.json - This is a good way to keep it easy to manage }}
+
+<header id="header">
+	<div class="container">
+      <!-- Static navbar -->
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">{{site.title}}</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+			{{#each site.menu}}
+				<li><a href="{{this.link}}">{{this.text}}</a></li>
+			{{/each}}
+          </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+  </div>
+</header>

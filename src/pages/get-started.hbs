@@ -8,6 +8,7 @@
 				<li><a href="#header" data-scroll="true"><i class="fa fa-angle-right"></i> simpGrunt</a></li>
 				<li><a href="#getstarted" data-scroll="true"><i class="fa fa-angle-right"></i> Get Started</a></li>
 				<li><a href="#understand" data-scroll="true"><i class="fa fa-angle-right"></i> Understand and Build</a></li>
+				<li><a href="#multiple" data-scroll="true"><i class="fa fa-angle-right"></i> Multiple Source Folders</a></li>
 				<li><a href="#features" data-scroll="true"><i class="fa fa-angle-right"></i> Features</a></li>
 				<li><a href="#automated" data-scroll="true"><i class="fa fa-angle-right"></i> Grunt Tasks</a></li>
 				<li><a href="#faq" data-scroll="true"><i class="fa fa-angle-right"></i> FAQ</a></li>
@@ -46,7 +47,7 @@
 					git clone https://github.com/arthurcamara1/simpGrunt.git
 					</code>
 					</li>
-					<li>Browse to simpGrunt's folder and run the following command to install the dependencies.
+					<li>Browse to simpGrunt's folder <code>cd simpGrunt</code> and run the following command to install the dependencies.
 					<code>
 					npm install
 					</code>
@@ -56,7 +57,7 @@
 					grunt
 					</code>
 					</li>
-					</ol><p>Great job! <strong>Open <code>http://localhost</code> in your browser and you'll be able to see the example page.</strong> Now you have to learn how to build your own website below.</p>
+					</ol><p>Great job! <strong>Open <code>web/index.html</code> in your browser and you'll be able to see the example page.</strong> Now you have to learn how to build your own website below.</p>
 				
 				</section>
 
@@ -135,6 +136,36 @@
 
 				<hr/>
 
+				<section id="multiple">
+
+					<h3>Multiple Source Folders</h3>
+
+					<p>It is also possible to have multiple source folders, instead of having only the default <code>src/</code>. simpGrunt currently comes with three source folders:</p>
+
+					<ul>
+						<li>
+						<code>src/</code>: simpGrunt example website
+						</li>
+						<li>
+						<code>src_clean/</code>: a clean source folder, so you can start your project building your own pages
+						</li>
+						<li>
+						<code>src_simple/</code>: a simple Bootstrap-only website
+						</li>
+					</ul>
+
+					<p>You can actually create your own source folder, by simply duplicating one of those or creating a new one, as long as you follow the project structure mentioned above.</p>
+
+					<p>By default, grunt will always process the source folder named <code>src/</code>. To process a different source folder, run the command <code>grunt --src=[FOLDER_NAME]</code>. Example:</p>
+
+					<pre>grunt --src=src_simple</pre>
+
+					<p>Of course, you can also rename the most usual folder you're using to <code>src/</code>.</p>
+
+				</section>
+
+				<hr/>
+
 				<section id="features">
 
 					<h3>Features</h3>
@@ -167,7 +198,7 @@
 
 					<h3>Grunt Tasks</h3>
 
-					<p>And, of course, it automatically builds your website, putting it all together and performing a bunch of optimizations and boring tasks you would forget to do yourself otherwise! You don't have to configure or download anything, really.</p>
+					<p>It is also possible to have multiple source folders, instead of having only the default <code>src/</code>. simpGrunt actually comes with three source folders:</p>
 
 					<ul>
 						<li>

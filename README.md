@@ -90,6 +90,25 @@ Consider reading more about handlebars at http://handlebarsjs.com/ and LESS at h
 
 After you're done with the website, you just have to upload the contents of the *web/* folder to your server.
 
+##Multiple sites
+
+It is also possible to have multiple source folders, instead of having only the default ```src/```. simpGrunt actually comes with three source folders:
+
+- ```src/```: simpGrunt example website
+- ```src_clean/```: a clean source folder, so you can start your project building your own pages
+- ```src_simple/```: a simple Bootstrap-only website
+
+You can actually create your own source folder, by simply duplicating one of those or creating a new one, as long as you follow the project structure mentioned above.
+
+By default, grunt will always process the source folder named ```src/```. To process a different source folder, run the command ```grunt --src=[FOLDER_NAME]```. Example:
+
+```
+grunt --src=src_simple
+```
+
+Of course, you can also rename the most usual folder you're using to ```src/```.
+
+
 ##Features
 
 simpGrunt is a collection of well-known useful tools, shipped together and running on top of Grunt (http://gruntjs.com/). Check out all the tools and grunt tasks it currently supports:
