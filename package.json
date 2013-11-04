@@ -1,5 +1,5 @@
 {
-  "name": "simpGrunt Example",
+  "name": "simpGrunt",
   "description": "This is my static website",
   "author": "Arthur Camara <arthurcamara@gmail.com>",
   "dependencies": {
