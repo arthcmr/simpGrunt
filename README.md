@@ -90,7 +90,7 @@ Consider reading more about handlebars at http://handlebarsjs.com/ and LESS at h
 
 After you're done with the website, you just have to upload the contents of the *web/* folder to your server.
 
-##Multiple sites
+##Multiple source folders
 
 It is also possible to have multiple source folders, instead of having only the default ```src/```. simpGrunt actually comes with three source folders:
 
