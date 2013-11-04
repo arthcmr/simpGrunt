@@ -2,6 +2,10 @@
   "name": "simpGrunt",
   "description": "This is my static website",
   "author": "Arthur Camara <arthurcamara@gmail.com>",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/arthurcamara1/simpGrunt.git"
+  },
   "dependencies": {
     "grunt": "~0.4.1",
     "assemble": "~0.4.0",
@@ -16,4 +20,5 @@
     "grunt-contrib-imagemin": "~0.3.0",
     "grunt-contrib-watch": "~0.5.3"
   }
+  
 }
