@@ -1,0 +1,44 @@
+@HeaderHeight: 380px;
+@HeaderImage: url(../img/header.jpg);
+
+@HeaderTitleFontSize: 3em;
+@HeaderSubtitleFontSize: 1.5em;
+
+#header {
+
+	background: @HeaderImage top center repeat;
+	height: @HeaderHeight;
+	text-align: center;
+	position: relative;
+
+	.inner-shadow(0, -7px, 0px, 0px, 0.15);
+
+	& > .container {
+		padding-top: 150px;
+	}
+
+	h1 {
+		font-family: @TitleFontFamily;
+		font-weight: bold;
+		font-size: @HeaderTitleFontSize;
+
+		color: @ColorWhite;
+
+		.text-shadow (5px 5px 0px rgba(0, 0, 0, 0.2));
+	}
+
+	h2 {
+		font-family: @BodyFontFamily;
+		font-weight: bold;
+		font-size: @HeaderSubtitleFontSize;
+		text-transform: uppercase;
+
+		color: @ColorBlue;
+	}
+
+	a:hover {
+		text-decoration: none;
+		border-bottom: 3px solid @ColorBlue;
+	}
+
+}

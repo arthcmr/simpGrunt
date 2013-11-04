@@ -1,0 +1,12 @@
+{{! The data is coming from src/data/page.json - This is a good way to keep it easy to manage }}
+
+<header id="header" data-parallax="true" data-factor="0.5" data-parallaxtype="background">
+	<div class="container">
+        <h1>{{site.title}}</h1>
+        <h2>/ 
+        	{{#each site.menu}}
+				<a href="{{this.link}}">{{this.text}}</a> / 
+        	{{/each}}
+        </h2>
+      </div>
+</header>

@@ -1,0 +1,15 @@
+<h2>Why should I use simpGrunt?</h2>
+
+{{! data is coming from src/data/features.json. This is an easy way to maintain and update content }}
+
+<div class="row">
+	{{#each features}}
+	<div class="col-12 col-sm-6 col-md-4 text-center">
+		<p><i class="fa fa-{{this.icon}} fa-5x"></i></p>
+		<p>{{this.text}}</p>
+		<p>
+			<a href="{{this.link}}" class="btn btn-default">{{this.button}}</a>
+		</p>
+	</div>
+	{{/each}}
+</div>

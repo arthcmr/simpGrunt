@@ -1,0 +1,32 @@
+<div id="slider-example" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    {{#each slider}}
+      <li data-target="#slider-example" data-slide-to="{{@key}}" class="{{this.active}}"></li>
+    {{/each}}
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+
+    {{#each slider}}
+      
+      <div class="item {{this.active}}">
+      <img src="img/slider/{{this.image}}" alt="{{this.title}}">
+        <div class="carousel-caption">
+          <p>{{this.caption}}</p>
+        </div>
+      </div>
+
+    {{/each}}
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#slider-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#slider-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>

@@ -1,0 +1,20 @@
+{
+	"1": {
+		"icon": "sitemap",
+		"text": "It is ready to use, with a very simple workflow on top of GruntJS. It's got a good structure for simple static pages! Plus, there's no configuration needed!.",
+		"button": "Get started with GruntJS",
+		"link": "get-started.html"
+	},
+	"2": {
+		"icon": "heart",
+		"text": "It comes with commonly used libraries, such as Bootstrap and jQuery. It also supports awesome tools, like Handlebars, Assemble and LESS.",
+		"button": "Check out the entire list",
+		"link": "get-started.html#features"
+	},
+	"3": {
+		"icon": "magic",
+		"text": "Automation is the keyword here! It is already configured to concatenate and minify HTML, CSS and JS files. Oh! And it optimizes images as well. Just saying...",
+		"button": "Read more about automated tasks",
+		"link": "get-started.html#automated"
+	}
+}

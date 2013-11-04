@@ -15,7 +15,7 @@ To get started with simpGrunt, follow these simple steps:
 ```
 git clone https://github.com/arthurcamara1/simpGrunt.git
 ```
-3. Browse to simpGrunt's folder and run the following command to install the dependencies.
+3. Browse to simpGrunt's folder ```cd simpGrunt``` and run the following command to install the dependencies.
 ```
 npm install
 ```
@@ -24,7 +24,9 @@ npm install
 grunt
 ```
 
-Great job! **Open ```http://localhost``` in your browser and you'll be able to see the example page.** Now you have to learn how to build your own website below.
+When you run this command, grunt keeps watching for changes, and rebuilds your entire website whenever you add, delete or change source files. If you don't want this option, run ```grunt build``` instead.
+
+Great job! **Open ```web/index.html``` in your browser and you'll be able to see the example page.** Now you have to learn how to build your own website below.
 
 ##Understand and build your website
 
@@ -64,8 +66,8 @@ Run the command ```grunt``` in the terminal and you will see another folder bein
 You want to build your own static site, though. The first thing to do is changing the file *package.json*. Change the following fields according to your preferences. **DO NOT change the dependencies or devDependencies**
 ```
 {
-        "name": "mywebsite",
-        "description": "This is my awesome website",
+        "name": "simpGrunt Example",
+        "description": "This is my static website",
         "author": "Arthur Camara <arthurcamara@gmail.com>",
         ...
 }

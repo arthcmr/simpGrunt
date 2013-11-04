@@ -1,0 +1,232 @@
+<section id="get-started">
+	
+	<div class="row">
+		<div class="col-md-3">
+			<div class="bs-sidebar hidden-print sidebar" role="complementary">
+            <ul class="nav bs-sidenav ">
+              
+				<li><a href="#header" data-scroll="true"><i class="fa fa-angle-right"></i> simpGrunt</a></li>
+				<li><a href="#getstarted" data-scroll="true"><i class="fa fa-angle-right"></i> Get Started</a></li>
+				<li><a href="#understand" data-scroll="true"><i class="fa fa-angle-right"></i> Understand and Build</a></li>
+				<li><a href="#features" data-scroll="true"><i class="fa fa-angle-right"></i> Features</a></li>
+				<li><a href="#automated" data-scroll="true"><i class="fa fa-angle-right"></i> Grunt Tasks</a></li>
+				<li><a href="#faq" data-scroll="true"><i class="fa fa-angle-right"></i> FAQ</a></li>
+
+            </ul>
+          </div>
+
+		</div>
+		<div class="col-md-9 text-left">
+
+			<article>
+
+				<section id="simpGrunt">
+					<h2>simpGrunt</h2>
+
+					<p><strong>simpGrunt is a simple boilerplate for quickly coding, building and optimizing static websites.</strong>
+					It already comes with cool and commonly used resources such as Bootstrap, jQuery, FontAweome and it does a bunch of automated tasks such as minifying your files, and much more.</p>
+
+					<p>Clone the repo or download it, and get started building your website following a simple workflow.</p>
+					<p><a href="https://github.com/arthurcamara1/simpGrunt" target="blank" class="btn btn-primary btn-lg"><i class="fa-github fa"></i> Get simpGrunt</a></p>
+				</section>
+
+				<hr/>
+
+				<section id="getstarted">
+
+					<h3>Get Started</h3>
+
+					<p>To get started with simpGrunt, follow these simple steps:</p>
+
+					<ol>
+					<li>First of all, you'll need to install Node and NPM (Node Package Manager, which comes with Node). Just go to <a href="http://nodejs.org/">http://nodejs.org/</a> and install it. <em>You might already have it!</em>
+					</li>
+					<li>If you haven't done this already, download simpGrunt or clone this repo
+					<code>
+					git clone https://github.com/arthurcamara1/simpGrunt.git
+					</code>
+					</li>
+					<li>Browse to simpGrunt's folder and run the following command to install the dependencies.
+					<code>
+					npm install
+					</code>
+					</li>
+					<li>simpGrunt is ready to go. Run the following command:
+					<code>
+					grunt
+					</code>
+					</li>
+					</ol><p>Great job! <strong>Open <code>http://localhost</code> in your browser and you'll be able to see the example page.</strong> Now you have to learn how to build your own website below.</p>
+				
+				</section>
+
+				<hr/>
+
+				<section id="understand">
+
+					<h3>Understand and build your website</h3>
+
+					<p>Okay, now that you got it all set up, let's get familiar with the project structure.</p>
+
+					<pre><code>src/
+	data/
+		books.json
+	img/
+		example.jpg
+		...
+	js/
+		main.js
+		...
+	layouts/
+		default.hbs
+	less/
+		main.less
+		...
+	libs/
+		bootstrap/
+		...
+	pages/
+		index.hbs
+		...
+	partials/
+		footer.hbs
+		...
+	Gruntfile.js
+	package.json
+</code></pre>
+
+					<p>Run the command <code>grunt</code> in the terminal and you will see another folder being created, called <strong>web/</strong>. The web folder contains all the generated files, minified, optimized and ready to be uploaded to your server.</p>
+
+					<p>You want to build your own static site, though. The first thing to do is changing the file <em>package.json</em>. Change the following fields according to your preferences. <strong>DO NOT change the dependencies or devDependencies</strong></p>
+
+					<pre><code>{
+        "name": "mywebsite",
+        "description": "This is my awesome website",
+        "author": "Arthur Camara &lt;arthurcamara@gmail.com&gt;",
+        ...
+}</code></pre>
+
+					<p>The next thing to do is changing the html, css, javascript and content. Let's quickly go over each of the folders to understand where things are located:</p>
+
+					<ul>
+					<li>
+					<strong>src/data/</strong>: json files that may be used to store any data you want. <strong>This is optional</strong>. However, it's good practice to use it, since you take full advantage of handlebars templates and content becomes easy to maintain. Upon running grunt, they will be automatically merged to the html pages.</li>
+					<li>
+					<strong>src/img/</strong>: all the website images (jpeg, gif or png). When grunt runs, they will be optimized (without losing their quality) and put under <em>web/img/</em>.</li>
+					<li>
+					<strong>src/js</strong>: all your javascript files (excluding vendor libraries). When grunt runs, they will be concatenated and a minified javascript file <em>web/js/scripts.js</em> will be created.</li>
+					<li>
+					<strong>src/layouts</strong>: layouts for your website. The default layout is called <em>default.hbs</em>. You may change this behavior in the <em>Gruntfile</em>.</li>
+					<li>
+					<strong>src/less/</strong>: your stylesheets, written in LESS. When grunt runs, they will be compiled, concatenated and a minified css file <em>web/css/style.css</em> will be created.</li>
+					<li>
+					<strong>src/libs/</strong>: vendor libraries, such as bootstrap, jquery, and so forth (see all the supported libraries below, under the section Features). When grunt runs, they will simply be copied to the folder <em>web/libs/</em> (currently, without any modification or optimization - be careful!).</li>
+					<li>
+					<strong>src/pages</strong>: page files, written in handlebars (*.hbs).</li>
+					<li>
+					<strong>src/partials</strong>: useful handlebars partials may be included here.</li>
+					</ul><p>To start your website, start by modifying the main template <code>src/layout/default.hbs</code> and the pages, under <code>src/pages</code>.</p>
+
+					<p>Consider reading more about handlebars at <a href="http://handlebarsjs.com/">http://handlebarsjs.com/</a> and LESS at <a href="http://lesscss.org">http://lesscss.org</a>.</p>
+
+					<p>After you're done with the website, you just have to upload the contents of the <em>web/</em> folder to your server.</p>
+
+				</section>
+
+				<hr/>
+
+				<section id="features">
+
+					<h3>Features</h3>
+
+					<p>simpGrunt is a collection of well-known useful tools, shipped together and running on top of Grunt (<a href="http://gruntjs.com/">http://gruntjs.com/</a>). Check out all the tools and grunt tasks it currently supports:</p>
+
+					<ul>
+						<li>
+						<strong>Bootstrap</strong>: Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development. - <a href="http://getbootstrap.com">http://getbootstrap.com</a>
+						</li>
+						<li>
+						<strong>jQuery</strong>: Who doesn't know jQuery? Over 2.2 million websites use it! <em>(<a href="http://wappalyzer.com/">http://wappalyzer.com/</a>)</em> - <a href="http://jquery.com">http://jquery.com</a>
+						</li>
+						<li>
+						<strong>FontAwesome</strong>: Awesome icons for Bootstrap - <a href="http://fontawesome.io/">http://fontawesome.io/</a>
+						</li>
+						<li>
+						<strong>Less</strong>: The dynamic stylesheet language - <a href="http://lesscss.org/">http://lesscss.org/</a>
+						</li>
+						<li>
+						<strong>Handlebars</strong>: Easy-to-build semantic templates - <a href="http://handlebarsjs.com/">http://handlebarsjs.com/</a>
+						</li>
+					</ul>
+
+				</section>
+
+				<hr/>
+
+				<section id="automated">
+
+					<h3>Grunt Tasks</h3>
+
+					<p>And, of course, it automatically builds your website, putting it all together and performing a bunch of optimizations and boring tasks you would forget to do yourself otherwise! You don't have to configure or download anything, really.</p>
+
+					<ul>
+						<li>
+						<strong>Assemble</strong>: Nice and easy workflow for organizing and building static sites - <a href="http://assemble.io/">http://assemble.io/</a>
+						</li>
+						<li>
+						<strong>grunt-contrib-clean</strong>: Cleans files and folders - <a href="https://github.com/gruntjs/grunt-contrib-clean">https://github.com/gruntjs/grunt-contrib-clean</a>
+						</li>
+						<li>
+						<strong>grunt-contrib-concat</strong>: Concatenates files - <a href="https://github.com/gruntjs/grunt-contrib-concat">https://github.com/gruntjs/grunt-contrib-concat</a>
+						</li>
+						<li>
+						<strong>grunt-contrib-uglify</strong>: Minify files with UglifyJS. - <a href="https://github.com/gruntjs/grunt-contrib-uglify">https://github.com/gruntjs/grunt-contrib-uglify</a>
+						</li>
+						<li>
+						<strong>grunt-contrib-copy</strong>: Copies files and folders to the right places - <a href="https://github.com/gruntjs/grunt-contrib-copy">https://github.com/gruntjs/grunt-contrib-copy</a>
+						</li>
+						<li>
+						<strong>grunt-contrib-less</strong>: Compiles LESS files to CSS - <a href="https://github.com/gruntjs/grunt-contrib-less">https://github.com/gruntjs/grunt-contrib-less</a>
+						</li>
+						<li>
+						<strong>grunt-contrib-htmlmin</strong>: Minifies HTML files - <a href="https://github.com/gruntjs/grunt-contrib-htmlmin">https://github.com/gruntjs/grunt-contrib-htmlmin</a>
+						</li>
+						<li>
+						<strong>grunt-contrib-imagemin</strong>: Minifies PNG, JPEG and GIF images - <a href="https://github.com/gruntjs/grunt-contrib-imagemin">https://github.com/gruntjs/grunt-contrib-imagemin</a>
+						</li>
+						<li>
+						<strong>grunt-contrib-watch</strong>: Build your website automatically again when changing, adding or deleting files - <a href="https://github.com/gruntjs/grunt-contrib-watch">https://github.com/gruntjs/grunt-contrib-watch</a>
+						</li>
+					</ul>
+
+				</section>
+
+				<hr/>
+
+				<section id="faq">
+
+					<h3>FAQ</h3>
+						
+					<p><strong>So, is this simply a bunch of widely available stuff placed together?</strong>
+					<br/>
+					<em>Yes. However, the fact that it comes with all those things, the configuration files, an easy workflow and ready to use makes things a lot simpler.</em></p>
+
+					<p><strong>What if I don't like or need something?</strong>
+					<br/>
+					<em>You may change anything you want. And doing that is not difficult at all!</em></p>
+
+					<p><strong>Do I have to upload the src/ folder to my server?</strong>
+					<br/>
+					<em>Nope! Just upload whatever is inside the web folder and you'll be fine.</em></p>
+
+					<p><strong>I improved this boilerplate! What do I do next?</strong>
+					<br/>
+					<em>Please, let me know and make a pull request, thus contributing to the project =) It's something I made for fun while working at a different project, but still, whatever you do may be useful to other people as well.</em></p>
+				</section>
+
+			</article>
+
+		</div>
+	</div>
+
+</section>
