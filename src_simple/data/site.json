@@ -1,0 +1,17 @@
+{
+	"title": "My simpGrunt Website",
+	"menu": [
+		{
+			"text": "Home",
+			"link": "index.html"
+		},
+		{
+			"text": "About",
+			"link": "about.html"
+		},
+		{
+			"text": "Contact",
+			"link": "contact.html"
+		}
+	]
+}
