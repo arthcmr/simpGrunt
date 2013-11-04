@@ -19,6 +19,8 @@ git clone https://github.com/arthurcamara1/simpGrunt.git
 ```
 npm install
 ```
+You may have to use sudo ```sudo npm install```.
+
 4. simpGrunt is ready to go. Run the following command:
 ```
 grunt
